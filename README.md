@@ -42,7 +42,10 @@ Revisa que todo está bien navegando a la dirección `localhost:8000`.
 ### Preguntas
 
 ¿Qué pasa si cambias el valor de la variable PORT?
+Si se cambia solo en un lugar, la aplicación no responde.
+
 ¿Qué cambios debes hacer para cambier el port a 8080?
+Hay que cambiar en .env y en compose.yaml.
 
 
 ## Paso 2
@@ -72,20 +75,26 @@ La opción `-d` permite dejar ejecutando los servicios y libera la consola.
 Ejecuta `docker ps`. 
 
 ¿Qué obtienes?.
+Obtengo una lista de 2 contenedores que están en ejecución.
 
 Ejecuta `docker images`. 
 
 ¿Cuál es el tamaño de la imagen del servidor flask?
+167MB
 
 ¿Cuál es el tamaño de la imagen postgres?
+438MB
 
 ¿Cuándo fueron creadas cada una de las imágenes?
+Servidor: 13 minutes ago
+Postgres: 7 weeks ago
 
 Ahora ejecuta `docker compose logs -f`, esto te permite revisar el log de los contenedores.
 
 Si navegas hacia la aplicación (http://localhost:8000/) se produce un error, revisa el log.
 
 ¿Cuál es la causa del error?
+El error es porque no existe la tabla books en la consulta que se ejecuta.
 
 Cierra el log presionando `control-c`, luego detén la aplicación con este comando:
 
